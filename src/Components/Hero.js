@@ -9,13 +9,11 @@ import FontAwesome from 'react-fontawesome'
 function Hero() {
 
 
-
-
   return (
     <div>
       <div className='landing-page'>
-
       </div>
+
       <div className='shadow'>
 
 
@@ -27,7 +25,7 @@ function Hero() {
           delay="0s"
           direction="normal"
           timing="ease"
-          iteration="1"
+          iteration="2"
           fillMode="none">
           SHABEER P P
         </MovingComponent></h1>
@@ -35,11 +33,12 @@ function Hero() {
 
 
         {/* additional text typing animation */}
+        
         <div className='right-animation'>
           <h3 className='moving-text'>  <MovingComponent type="typewriter" className='anime'
             dataText={[
-              'React Developer',
-              'HTML',
+              'React',
+              'Python',
               'CSS',
               'JAVA SCRIPT'
             ]} /></h3>
@@ -73,16 +72,8 @@ function Hero() {
         <button className=' hero-button'>hire me</button>
 
 
-
-
       </div>
-
-
     </div>
-
-
-
-
   )
 }
 

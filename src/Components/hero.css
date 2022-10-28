@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .hero-name {
-    color: #05a081;
+    color:#17a2b8;
     position: absolute;
     top: 300px;
     left: 350px;
@@ -23,7 +28,7 @@
     position: absolute;
     top: 47px;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0,0.8);
     overflow: hidden;
 
 }

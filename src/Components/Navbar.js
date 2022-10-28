@@ -1,16 +1,14 @@
 import React,{useState} from 'react'
-import Hero from './Hero';
 import './navbar.css'
 import {Routes,Route,Link} from 'react-router-dom'
-import About from '../Container/About'
-import Contact from '../Container/Contact'  
-import Myskills from '../Container/Myskills';
+
 
 
 
 function Navbar() {
 
 const [responsiveH,setResponsiveH]=useState(false)
+
 
 // onclick handler for navbar
 
