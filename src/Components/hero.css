@@ -1,0 +1,187 @@
+.hero-name {
+    color: #05a081;
+    position: absolute;
+    top: 300px;
+    left: 350px;
+}
+
+/* landing page image sizing */
+.landing-page {
+
+    background-image: url('https://img.freepik.com/free-vector/gradient-abstract-colorful-shapes-background_23-2149120340.jpg?w=1380&t=st=1663667227~exp=1663667827~hmac=32708f1824109f941c36c1a62118dc568ae08d2704a2618bc1ea25a166ab0545');
+    width: 100vw;
+    height: 95vh;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+/* dim effect on landing page image */
+.shadow {
+    width: 100vw;
+    height: 95vh;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    overflow: hidden;
+
+}
+
+/* Hire button on the landing page */
+.hero-button {
+    position: absolute;
+    top: 300px;
+    left: 590px;
+    width: 93px;
+    height: 37px;
+    color: white;
+    font-size: 16px;
+    background-color: #05a081;
+    border-radius: 10px;
+    border: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+   
+}
+
+.description {
+    color: white;
+    margin-top: 355px;
+    margin-left: 350px;
+
+
+}
+
+.moving-text {
+    position: absolute;
+    top: 44%;
+    color: #278c8c;
+    left: 76%;
+    font-size: 30px;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: #05a081;
+    cursor: pointer;
+
+}
+
+.hero:hover {
+
+    font-size: 33px;
+
+}
+
+/* typing text  animation hiding responsive */
+
+@media screen and (max-width:1267px) {
+    .moving-text{
+        display: none;
+      
+       
+    }
+}
+
+
+@media screen and (max-width:1050px) {
+    .shadow {
+
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 47px;
+
+        background-color: rgb(0, 0, 0, 0,1);
+        overflow: hidden;
+    }
+    .hero-name {
+        color: #05a081;
+        position: unset;
+        text-align: center;
+        margin-top: 15%;
+    }
+    .des-container {
+        height: 20%;
+        text-align: center;
+        position: relative;
+        top: 5%;
+
+
+
+    }
+    .description {
+
+        color: white;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .hero-button{
+       top:45%;
+        left: 45%;
+      
+    }
+    .moving-text{
+        display: none;
+    }
+
+}
+
+
+
+
+/* set react page responsive  */
+
+@media screen and (max-width:600px) {
+    .shadow {
+
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 47px;
+
+        background-color: rgb(0, 0, 0, 0,1);
+        overflow: hidden;
+    }
+
+    .hero-name {
+        color: #05a081;
+        position: unset;
+        text-align: center;
+        margin-top: 30%;
+    }
+
+    .hero-button {
+     display: none;
+    }
+
+
+     /* rotating plus icon position */
+    .responsive-button{
+        margin-top: 20%;
+     color: #05a081;
+        
+    }
+   
+
+    .des-container {
+        height: 20%;
+        text-align: center;
+        position: relative;
+        top: 7%;
+
+
+
+    }
+
+    .description {
+
+        color: white;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+   
+}
+

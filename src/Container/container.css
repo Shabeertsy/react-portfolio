@@ -1,0 +1,31 @@
+.about-page{
+    color: white;
+    position: relative;
+    top:80px;
+    text-align: center;
+}
+
+.about-page p{
+   margin-top: 50px;
+}
+.skills{
+    color: white;
+    text-align: center;
+    padding-top:100px;
+}
+.skills p{
+    margin-top:50px ;
+}
+
+
+
+.contact{
+    color:white;
+    text-align: center;
+    margin-top:39px;
+}
+
+.contact-insta{
+    color:white;
+
+}
