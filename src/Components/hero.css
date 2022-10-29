@@ -1,43 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&family=Roboto&display=swap');
 
-body{
-    font-family: 'Roboto', sans-serif;
-}
+
 .hero-name {
-    color:#17a2b8;
-    position: absolute;
-    top: 300px;
-    left: 350px;
-}
-
-/* landing page image sizing */
-.landing-page {
-
-    background-image: url('https://img.freepik.com/free-vector/gradient-abstract-colorful-shapes-background_23-2149120340.jpg?w=1380&t=st=1663667227~exp=1663667827~hmac=32708f1824109f941c36c1a62118dc568ae08d2704a2618bc1ea25a166ab0545');
-    width: 100vw;
-    height: 95vh;
-    background-size: cover;
-    overflow: hidden;
+    color: #17a2b8;
 
 }
+
+
+
 
 /* dim effect on landing page image */
-.shadow {
-    width: 100vw;
-    height: 95vh;
-    position: absolute;
-    top: 47px;
-    left: 0;
-    background-color: rgb(0, 0, 0,0.8);
-    overflow: hidden;
+.main-body {
+    background-image: url('https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    opacity: 0.8;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
 
+
+}
+
+.shadow-main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.shadow-right {
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shadow-left {
+    width: 50vw;
+
+}
+.des-left{
+ height: 70vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hero-name {
+    padding: 50px;
 }
 
 /* Hire button on the landing page */
-.hero-button {
+.button-div {
     position: absolute;
-    top: 300px;
-    left: 590px;
+    top: 80vh;
+    left: 48vw;
+}
+
+.hero-button {
     width: 93px;
     height: 37px;
     color: white;
@@ -45,24 +68,12 @@ body{
     background-color: #05a081;
     border-radius: 10px;
     border: none;
-    font-family: "Font Awesome 5 Free";
     font-weight: 400;
-   
-}
-
-.description {
-    color: white;
-    margin-top: 355px;
-    margin-left: 350px;
-
 
 }
 
 .moving-text {
-    position: absolute;
-    top: 44%;
     color: #278c8c;
-    left: 76%;
     font-size: 30px;
 }
 
@@ -82,111 +93,73 @@ body{
 /* typing text  animation hiding responsive */
 
 @media screen and (max-width:1267px) {
-    .moving-text{
+    .moving-text {
         display: none;
-      
-       
+
+
     }
 }
 
 
 @media screen and (max-width:1050px) {
-    .shadow {
 
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 47px;
-
-        background-color: rgb(0, 0, 0, 0,1);
-        overflow: hidden;
-    }
     .hero-name {
         color: #05a081;
-        position: unset;
         text-align: center;
-        margin-top: 15%;
     }
-    .des-container {
-        height: 20%;
-        text-align: center;
-        position: relative;
-        top: 5%;
 
 
-
-    }
-    .description {
-
-        color: white;
-        margin-top: 0;
-        margin-left: 0;
-    }
-    .hero-button{
-       top:45%;
-        left: 45%;
-      
-    }
-    .moving-text{
+    .moving-text {
         display: none;
     }
 
 }
 
+@media screen and (max-width:818px) {
+.main-body{
+    background-image: none;
+    color:#fff;
+}
 
+.des-left{
+    display: unset;
+    text-align: center;
+}
+
+.shadow-left{
+    position: absolute;
+    margin-left: 26%;
+}
+/* rotating plus icon position */
+.responsive-button {
+    display: none;
+ }
+
+
+}
 
 
 /* set react page responsive  */
 
 @media screen and (max-width:600px) {
-    .shadow {
+   
 
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 47px;
-
-        background-color: rgb(0, 0, 0, 0,1);
-        overflow: hidden;
-    }
 
     .hero-name {
-        color: #05a081;
-        position: unset;
-        text-align: center;
-        margin-top: 30%;
-    }
-
-    .hero-button {
-     display: none;
+        color: #05a081;  
+        margin-top: 0px;
+        font-size: medium;
     }
 
 
-     /* rotating plus icon position */
-    .responsive-button{
-        margin-top: 20%;
-     color: #05a081;
-        
+
+    /* rotating plus icon position */
+    .responsive-button {
+       display: none;
     }
+
+
    
 
-    .des-container {
-        height: 20%;
-        text-align: center;
-        position: relative;
-        top: 7%;
 
-
-
-    }
-
-    .description {
-
-        color: white;
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-   
 }
-
