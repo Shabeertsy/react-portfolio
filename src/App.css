@@ -7,3 +7,10 @@ box-sizing: border-box;
 body{
     background-color:black ;
 }
+.app{
+background:url('./assets/images/cover.jpg');
+background-size: cover;
+}
+.shadow{
+   background:linear-gradient(220deg,rgb(31, 54, 56,0.6),rgb(31, 31, 31));
+}

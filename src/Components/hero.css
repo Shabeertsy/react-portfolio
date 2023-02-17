@@ -1,165 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vai&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+
+/* default font setting */
+.font-family {
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* color effect on landing page image */
+.main-body {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-container {
+  width: 100vw;
+}
+
+.png-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* slider animations for container first sliding */
+.left-slider {
+  position: relative;
+  left: -100%;
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+
+.right-slider {
+  position: relative;
+  right: -100%;
+  animation: slideInRight 2s forwards;
+}
+
+@keyframes slideInRight {
+  100% {
+    right: 0;
+  }
+}
+
+/* up and down */
+.up-slider {
+  position: relative;
+  top: -100%;
+  animation: slideInTop 2s forwards;
+
+}
+
+@keyframes slideInTop {
+  100% {
+    top: 0;
+  }
+}
+
+.down-slider {
+  position: relative;
+  bottom: -100%;
+  animation: slideInDown 2s forwards;
+
+}
+
+@keyframes slideInDown {
+  100% {
+    bottom: 0;
+  }
+}
+
+/* end animation */
+
+
+
+
+.png-image {
+  width: 60%;
+}
+
+
+/* animation  */
+.png-image {
+  position: relative;
+  animation: move-up-down 5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
 
 
 .hero-name {
-    color: #17a2b8;
+  font-weight: 600;
+}
 
+.animated-container {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.arrow-icon {
+  color: #23a6d5;
+  padding-left: 15px;
+  font-size: 1.2rem;
+}
+
+.arrow-icon {
+
+  animation: fade 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
 
 
-/* dim effect on landing page image */
-.main-body {
-    background-image: url('https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    opacity: 0.8;
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-
-
-}
-
-.shadow-main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+/* hero buttons */
+.contact-btn {
+  text-decoration: none;
+  font-weight: 600;
+  background: none;
+  color: #fff;
+  border: 1px dotted;
+  border-color: #23a6d5;
+  border-radius: 8px;
+  padding: 4px 26px;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
 
 }
 
-.shadow-right {
-    padding: 50px;
-    width: 50%;
+.contact-btn:hover {
+  border-color: #e73c7e;
+  color: #e73c7e;
+  transform: scale(1.1);
+}
+
+.welcome-btn {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #1a84ab, #23d5ab);
+  width: 100%;
+  height: 35px;
+  border: 1px solid;
+  border-color: #264c5b;
+  border-radius: 5px;
+  color: #fff;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+
+
+/* media query */
+@media only screen and (max-width: 994px) {
+  .animated-container {
+    margin-top: 130px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .png-image {
+    width: 16rem;
+    position: absolute;
+    top: 130px;
+  }
+
+  .hireme {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-}
-
-.shadow-left {
-    width: 50vw;
-
-}
-.des-left{
- height: 70vh;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.hero-name {
-    padding: 50px;
-}
-
-/* Hire button on the landing page */
-.button-div {
-    position: absolute;
-    top: 80vh;
-    left: 48vw;
-}
-
-.hero-button {
-    width: 93px;
-    height: 37px;
-    color: white;
-    font-size: 16px;
-    background-color: #05a081;
-    border-radius: 10px;
-    border: none;
-    font-weight: 400;
-
-}
-
-.moving-text {
-    color: #278c8c;
-    font-size: 30px;
-}
-
-.hero-button:hover {
-    background-color: white;
-    color: #05a081;
-    cursor: pointer;
-
-}
-
-.hero:hover {
-
-    font-size: 33px;
-
-}
-
-/* typing text  animation hiding responsive */
-
-@media screen and (max-width:1267px) {
-    .moving-text {
-        display: none;
-
-
-    }
+  }
+  
 }
 
 
-@media screen and (max-width:1050px) {
 
-    .hero-name {
-        color: #05a081;
-        text-align: center;
-    }
-
-
-    .moving-text {
-        display: none;
-    }
-
-}
-
-@media screen and (max-width:818px) {
-.main-body{
-    background-image: none;
-    color:#fff;
-}
-
-.des-left{
-    display: unset;
-    text-align: center;
-}
-
-.shadow-left{
-    position: absolute;
-    margin-left: 26%;
-}
-/* rotating plus icon position */
-.responsive-button {
+/* block contents in desktop view */
+@media only screen and (min-width: 994px) {
+  .mobile-view {
     display: none;
- }
-
-
-}
-
-
-/* set react page responsive  */
-
-@media screen and (max-width:600px) {
-   
-
-
-    .hero-name {
-        color: #05a081;  
-        margin-top: 0px;
-        font-size: medium;
-    }
-
-
-
-    /* rotating plus icon position */
-    .responsive-button {
-       display: none;
-    }
-
-
-   
-
+  }
 
 }

@@ -1,97 +1,268 @@
-
 /* about page designing */
-.about-page{
+.about-page {
     color: white;
     position: relative;
-    top:80px;
+    top: 80px;
     text-align: center;
 }
 
-
-.about-page p{
-   margin-top: 50px;
+.about-page p {
+    margin-top: 50px;
 }
+
+
+
+
 
 /* skills section design */
-.skills{
+.skills-main {
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
     color: white;
-    text-align: center;
-    padding-top:100px;
+    padding-top: 100px;
 }
-.skills p{
-    margin-top:50px ;
+
+.front-skill-row {
+    height: 240px;
+    margin-bottom: 60px;
+
 }
+
+.skill-icons {
+    font-size: 4rem;
+}
+
+.about-dis {
+    margin-top: 80px;
+    margin-right: 20%;
+}
+
+.cyan {
+    color: #abd2ca;
+}
+
+.text-bootstrap {
+    color: rgb(175, 41, 175);
+}
+
+
+
+
 
 
 /* contact section */
-.contact{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    color:white;
-    background-image:black;
+.contact {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding-top: 40px;
+    min-height: 100vh;
+}
+
+.contact-data {
+    width: 70%;
+    height: 50vh;
+}
+
+.social {
+    margin-top: 20px;
     text-align: center;
-    margin-top:39px;
-    
 
 }
 
-.link{
-   padding-top: 40px;
-   display: flex;
-   justify-content: center;
+.social-icons {
+    font-size: 2rem;
+    color: rgb(7, 98, 114);
 }
-.contact-details{
+
+.social-icons:hover {
+    color: #23d5ab;
+}
+
+
+.fading-text {
+    color: #fff;
+    margin-left: 2.4%;
+    animation: fade 2s ease-in-out infinite;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+    padding-bottom: 40px;
+    width: 60%;
+    text-align: end;
+    border: 1px solid;
+    color: #1e9d9d;
+}
+.alert-two{
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+    padding-bottom: 40px;
+    width: 60%;
+    text-align: end;
+    border: 1px solid;
+    color: red;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-details {
     margin-top: 100px;
 }
 
 
-.link a{
+.link a {
     text-decoration: none;
-    color:white;
+    color: white;
     padding-right: 8px;
     padding-left: 7px;
 }
+
+
+
+
+
+
 /* 
 form input design */
-.form{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.form {
+    width: 100%;
     margin-top: 20px;
-}
-.form-list{
-    width: 310px;
-   
-    
+
 }
 
-.inp{
-    width: 300px;
-    height: 40px;
-    margin-top:7px;
-    border-radius: 5px;
-}
-.first-name{
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-}
-
-.feedback{
-    margin-top: 9px;
-    height: 130px;
-    width: 300px;
-    border-radius: 5px;
-}
-.button{
-    margin-top: 20px;
-    width:200px;
-    height: 40px;
-    border-radius: 10px;
-    background-color:#28a745;
-    color: #fff;
-    font-size: 16px;
+.inpu {
+    padding-left: 10px;
+    width: 40%;
     border: none;
+    border-bottom: 1px solid;
+    border-color: #abd2ca;
+    background: none;
+    outline: none;
+    color: #23d5ab;
+}
 
+.send-btn {
+    width: 70px;
+    background: none;
+    color: #1e9d9d;
+    border: 1px dotted;
+    border-radius: 4px;
+}
+
+.send-btn:hover {
+    color: red;
+}
+
+
+
+
+/* project page */
+
+.project-main {
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.project-links {
+    text-decoration: none;
+    color: #a2684d;
+}
+
+
+.credit-text {
+    font-size: smaller;
+}
+
+
+/* up and down */
+.up-slider {
+    position: relative;
+    top: -100%;
+    animation: slideInTop 2s forwards;
+
+}
+
+@keyframes slideInTop {
+    100% {
+        top: 0;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width:994px) {
+    .about-dis {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 70px;
+
+    }
+
+    .skill-inner-main {
+        text-align: center;
+
+    }
+
+    .inpu {
+        width: 100%;
+    }
+
+    .form {
+        margin-top: 100px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* mediaquery for contanct page */
+    .contact-inner-main {
+        margin-top: 500px;
+    }
+
+    .fading-text {
+        text-align: center;
+        margin-left: 0;
+
+    }
+
+    .feedback-txt {
+        text-align: center;
+    }
+
+    .project-main {
+        height: 80%;
+    }
+    .alert{
+        margin-top: 50px;
+        width: 100%;
+        border: none;
+    }
+    .alert-two{
+        margin-top: 50px;
+        width: 100%;
+        border: none;
+    }
 }

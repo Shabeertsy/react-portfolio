@@ -1,87 +1,68 @@
 import React from 'react'
 import './hero.css'
-import MovingComponent from 'react-moving-text'
-import FontAwesome from 'react-fontawesome'
-
+import Myskills from '../Container/Myskills'
+import Contact from '../Container/Contact'
+import { BsArrowRightCircle } from "react-icons/bs"
+import { Link } from 'react-router-dom'
+import Projects from '../Container/Projects'
 
 
 
 function Hero() {
-
-
   return (
-
     <div>
+      <div className="main-body">
+        <div className="container hero-container left-slider">
+          <div className="row">
 
-      <div className='background'>
-      </div>
-      
-     {/* main-background body */}
-      <div className='main-body'>
+            {/* left container */}
+            <div className="col-lg-6">
+              <div>
+                <div className="container animated-container  ">
+                  <div>
+                    <button className="welcome-btn font-family">
+                      Welcome to my PortFolio
+                    </button>
+                    <div className="name-container text-light pt-3">
+                      <h1 className='font-family hero-name'>Hi! I'm Shabeer</h1>
+                    </div>
+                    <div className="animated-text mt-4">
+                      <h4 className='text-light font-family'>Fullstack Web developer</h4>
+                    </div>
+                    <div className="dis-container">
+                      <p className="font-family description text-light">
+                       I'm a Python django + React developer 
+                      </p>
+                    </div>
+                    <div className="hireme d-flex align-items-center ">
+                      <Link to='/contacts' className='contact-btn font-family'> Let's Connect<i className='arrow-icon'><BsArrowRightCircle /></i> </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+            </div>
 
-        <div className='shadow-left'>
-          {/* name text animation  */}
-          <div className="">
-            <h1 className='hero-name responsive-text'>  <MovingComponent
-              type="fadeInFromLeft"
-              duration="1800ms"
-              delay="0s"
-              direction="normal"
-              timing="ease"
-              iteration="2"
-              fillMode="none">
-              SHABEER P P
-            </MovingComponent></h1>
-          </div>
+            {/* right container */}
+            <div className="col-lg-6 ">
+              <div className="png-container">
+                <img className='png-image' src={require('../assets/images/space.png')} alt="" />
+              </div>
 
-          <div className="des-left">
-            <p className='description'>Build Amazing Responsive Website using react html and css  <br />Lorem ipsum dolor sit amet consectetur. <br /> Lorem ipsum dolor sit amet consectetur. </p>            
+            </div>
           </div>
 
         </div>
 
-
-
-        {/* additional text typing animation */}
-        <div className="shadow-right">
-          <div className='right-animation'>
-            <h3 className='moving-text'>  <MovingComponent type="typewriter" className='anime'
-              dataText={[
-                'React',
-                'Python',
-                'CSS',
-                'JAVA SCRIPT'
-              ]} /></h3>
-          </div>
-
-          <div className='des-container'>
-
-
-            {/* rotating plus icon using react module */}
-
-            <FontAwesome
-
-              className='responsive-button '
-              name="plus"
-
-              size="2x"
-              spin
-              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-            />
-
-
-
-          </div>
-        </div>
       </div>
 
-      {/* landing page hire me button */}
-      <div className="button-div">
-        <button className=' hero-button'>hire me</button>
+      {/* use other Components on mobile view */}
+      <div className="mobile-view">
+      <Projects/>
+        <Myskills/>
+        <Contact/>
+
       </div>
-
-
     </div>
   )
 }
